@@ -1,0 +1,16 @@
+{
+  "processes": {
+    "OneDrive.exe": "Sincronización que puede interferir en bitrate",
+    "Dropbox.exe": "Sincronizador de archivos",
+    "SkypeApp.exe": "Cliente de llamadas no usado en stream",
+    "Spotify.exe": "App de audio separada de tu mezcla de stream",
+    "BackgroundTransferHost.exe": "Servicio de transferencia de Windows Update"
+  },
+  "services": {
+    "WSearch": "Indexación de archivos",
+    "SysMain": "Superfetch – no relevante para calidad de stream",
+    "DiagTrack": "Telemetría de Windows",
+    "WMPNetworkSvc": "Compartición DLNA",
+    "TabletInputService": "Entrada táctil si no usás tablet"
+  }
+}

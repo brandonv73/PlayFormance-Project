@@ -1,0 +1,16 @@
+{
+  "processes": {
+    "OneDrive.exe": "Sincronización en segundo plano (ciérralo si no lo usas)",
+    "Dropbox.exe": "Sincronizador de archivos en segundo plano",
+    "AdobeUpdater.exe": "Actualizador de Adobe que consume CPU innecesario",
+    "Spotify.exe": "App de audio que no aporta al rendimiento del sistema",
+    "XboxApp.exe": "App de Xbox preinstalada sin uso durante gaming"
+  },
+  "services": {
+    "WSearch": "Indexación de archivos (pausar para liberar disco)",
+    "SysMain": "Superfetch o SysMain – cacheo de disco no útil para juegos",
+    "DiagTrack": "Telemetría de Windows (puede pausar sin riesgo)",
+    "Spooler": "Cola de impresión si no usás impresora",
+    "WMPNetworkSvc": "Compartición DLNA de Windows Media"
+  }
+}

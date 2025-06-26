@@ -1,0 +1,16 @@
+{
+  "processes": {
+    "OneDrive.exe": "Sincronización de archivos; detén para reducir overhead",
+    "SteamWebHelper.exe": "Overlay web de Steam que añade latencia",
+    "NVIDIA Share.exe": "ShadowPlay/Share de NVIDIA si no grabás",
+    "RadeonSoftware.exe": "UI de AMD; sin impacto en GPU render",
+    "BackgroundTransferHost.exe": "Transferencias de fondo de Win Update"
+  },
+  "services": {
+    "WSearch": "Indexer de Windows Search – frena disco",
+    "SysMain": "Superfetch – no beneficia FPS",
+    "TrkWks": "Servicio de rastreo de cambios NTFS – no crítico",
+    "DiagTrack": "Telemetría Windows",
+    "Spooler": "Impresión – inactivo para gamers"
+  }
+}
