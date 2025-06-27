@@ -1,5 +1,3 @@
-# detection.py
-
 import psutil
 import time
 import win32api
@@ -20,7 +18,7 @@ SYSTEM_DIRS = (
 )
 
 def es_critico(proc):
-    """Filtrar procesos que no tocamos jamás."""
+    """Filtrar procesos que no tocamos"""
     name = (proc.info.get('name') or "").lower()
     if name in CRITICAL:
         return True
@@ -34,7 +32,7 @@ def es_critico(proc):
 
 def firma_digital(path):
     """Devuelve CompanyName o, si es binario de Windows, 'Microsoft Corporation'."""
-    # 1) Si está bajo Windows dir, lo marcamos Microsoft
+    # 1) Si está en Windows dir, lo marcamos Microsoft
     try:
         p = Path(path)
         if any(str(p).lower().startswith(sd.lower()) for sd in SYSTEM_DIRS):
