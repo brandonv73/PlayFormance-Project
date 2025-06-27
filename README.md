@@ -14,27 +14,27 @@ PlayFormance es una herramienta multiplataforma para maximizar el rendimiento de
 ## 📥 Instalación
 
 1. Cloná el repositorio  
+   ```
+     git clone https://github.com/brandonv73/PlayFormance-Project.git
+     cd GameOptimizer
    
-   -  git clone https://github.com/brandonv73/PlayFormance-Project.git
-   -  cd GameOptimizer
+1. Configurá el entorno de Python
+   ```
+     python3 -m venv .venv
+     source .venv/bin/activate    # Linux / macOS
+     .venv\Scripts\activate       # Windows
+     pip install -r requirements.txt
    
-2. Configurá el entorno de Python
-   
-   -  python3 -m venv .venv
-   -  source .venv/bin/activate    # Linux / macOS
-   -  .venv\Scripts\activate       # Windows
-   -  pip install -r requirements.txt
-   
-3. Instalá dependencias del frontend
-   
-   - cd client 
-   - npm install 
-   - npm run build
-   - cd ..
+2. Instalá dependencias del frontend
+   ```
+    cd client 
+    npm install 
+    npm run build
+    cd ..
 
 5. Levantá la aplicación
    - Backend: python app.py
-   - Frontend: npm run electron (desde la carpeta raíz)
+   - Frontend: ```npm run electron``` (desde la carpeta raíz)
      
 ⚙️ Configuración
 
@@ -49,12 +49,12 @@ PlayFormance es una herramienta multiplataforma para maximizar el rendimiento de
             - steam.exe
 
    - Webhook para integraciones (p. e. Slack, OBS)
-   - webhook_url: "https://hooks.mi-servicio.com/..."
+   - ```webhook_url: "https://hooks.mi-servicio.com/..."```
 
 📋 Uso
    - Abrí la UI y ajustá manualmente qué procesos pausar
    - O bien, invocá la API:
-      - curl -X POST http://localhost:5000/optimize
+       ```curl -X POST http://localhost:5000/optimize```
    - Revisá logs en logs/optimizer.log para ver decisiones y tiempos
   
 🧪 Testing y CI
