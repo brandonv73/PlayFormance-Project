@@ -1,6 +1,5 @@
-/* ui/styles.css */
 
-/* ===== Global ===== */
+/*  Global  */
 body {
   font-family: sans-serif;
   margin: 0;
@@ -13,7 +12,7 @@ header {
   text-align: center;
 }
 
-/* ===== Controls ===== */
+/*  Controls  */
 #controls {
   padding: 1em;
   text-align: center;
@@ -24,7 +23,7 @@ button {
   font-size: 1em;
 }
 
-/* ===== Loader & Messages ===== */
+/*  Loader & Messages  */
 #loader {
   text-align: center;
   font-size: 1.2em;
@@ -45,7 +44,7 @@ button {
   color: #c00;
 }
 
-/* ===== Table ===== */
+/*  Table  */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -57,7 +56,7 @@ th, td {
   text-align: center;
 }
 
-/* ===== Modal: Logs Viewer ===== */
+/*  Modal: Logs Viewer  */
 .modal {
   position: fixed;
   top: 0; left: 0;
