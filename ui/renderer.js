@@ -1,4 +1,3 @@
-// ui/renderer.js
 const scanBtn = document.getElementById('scanBtn');
 const killBtn = document.getElementById('killBtn');
 const logsBtn = document.getElementById('logsBtn');
@@ -50,7 +49,6 @@ async function doLogs() {
   } finally { hideLoader(); }
 }
 
-// Event bindings...
 scanBtn.onclick = doScan;
 killBtn.onclick = doKill;
 logsBtn.onclick = doLogs;
