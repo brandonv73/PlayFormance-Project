@@ -1,5 +1,3 @@
-# main.py
-
 import argparse
 import schedule
 import time
@@ -11,14 +9,14 @@ from psutil import NoSuchProcess, TimeoutExpired
 from detection import scan_candidates
 from utils import log_action, log_error
 
-# ——— Dummy notifier para evitar errores de GUI —————————————————————
+#  Dummy notifier para evitar errores de GUI 
 class DummyNotifier:
     def show_toast(self, *args, **kwargs):
         pass
 
 notifier = DummyNotifier()
 
-# ——— Parseo de argumentos CLI —————————————————————————————————————
+#  Parseo de argumentos CLI 
 parser = argparse.ArgumentParser(description="GameOptimizer Dynamic")
 parser.add_argument(
     "--dry-run", action="store_true",
@@ -34,7 +32,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-# ——— Funciones de UI en consola ————————————————————————————————————
+#  Funciones de UI en consola 
 def mostrar_candidatos(cands):
     headers = ["IDX", "PID", "Nombre", "CPU%", "RAM(MB)", "Firma"]
     rows = []
@@ -47,7 +45,7 @@ def mostrar_candidatos(cands):
             f"{c['ram']:.1f}",
             c["signer"]
         ])
-    print("\n🔍 Candidatos a optimizar:")
+    print("\n Candidatos a optimizar:")
     print(tabulate(rows, headers, tablefmt="fancy_grid"))
 
 def menu_interactivo(cands):
@@ -66,7 +64,7 @@ def menu_interactivo(cands):
     sel = resp.get("to_kill", [])
     return [int(item.split(" ")[0]) for item in sel]
 
-# ——— Lógica de terminación con logging y dry-run —————————————————————
+#  Lógica de terminación con logging y dry-run 
 def aplicar_terminacion(idxs, cands):
     if not idxs:
         print("■ No se seleccionó ningún proceso.")
@@ -111,25 +109,25 @@ def aplicar_terminacion(idxs, cands):
         f"{'Simulación' if args.dry_run else 'Procesos terminados'}"
     )
 
-# ——— Tarea principal —————————————————————————————————————————————
+#  Tarea principal 
 def job():
     print("\n=== Escaneo dinámico — GameOptimizer ===")
     try:
         candidates = scan_candidates()
     except Exception as e:
         log_error(f"Error en scan_candidates: {e}")
-        print(f"❌ Error al escanear: {e}")
+        print(f" Error al escanear: {e}")
         return
 
     if not candidates:
-        print("✅ No hay procesos candidatos a cerrar.")
+        print(" No hay procesos candidatos a cerrar.")
         return
 
     mostrar_candidatos(candidates)
     seleccionados = menu_interactivo(candidates)
     aplicar_terminacion(seleccionados, candidates)
 
-# ——— Entry point ————————————————————————————————————————————————
+#  Entry point 
 if __name__ == "__main__":
     # Primera ejecución inmediata
     job()
@@ -147,4 +145,4 @@ if __name__ == "__main__":
             schedule.run_pending()
             time.sleep(1)
     except KeyboardInterrupt:
-        print("\n■ Scheduler detenido. ¡Hasta la próxima!")
+        print("\n Scheduler detenido. ¡Hasta la próxima!")
