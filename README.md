@@ -1,6 +1,6 @@
 # PlayFormance
 
-PlayFormance es una herramienta multiplataforma para maximizar el rendimiento de tu PC durante sesiones de gaming. Combina un backend en Python que detecta y gestiona procesos con heurísticas avanzadas, y un frontend de escritorio construido con Electron.
+PlayFormance es una herramienta multiplataforma para maximizar el rendimiento de tu PC durante sesiones de gaming/streaming. Combina un backend en Python que detecta y gestiona procesos con heurísticas avanzadas, y un frontend de escritorio construido con Electron.
 
 ## 🚀 Características principales
 
@@ -69,7 +69,7 @@ PlayFormance es una herramienta multiplataforma para maximizar el rendimiento de
    - Pasá el CI y respondiste feedback de código
   
 📄 Licencia
-Este proyecto está bajo la licencia MIT.
+Este proyecto está bajo la licencia ALL RIGHT RESERVED.
 Ver LICENSE.
 
 ---
